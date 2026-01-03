@@ -1,0 +1,118 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #d9c2aa;
+  background-image: radial-gradient(
+    circle at 20% 20%,
+    #f5e7dc,
+    #e4cdbb 45%,
+    #cfb39b 80%
+  );
+  color: #2a1a12;
+  padding-bottom: 110px;
+}
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(180deg, #d3b69a 0%, #dab794 100%);
+  border-top: 1px solid #ecc19c;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.12);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 12px 0;
+  z-index: 1000;
+}
+
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: #5b3b27;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(178, 139, 104, 0.8);
+  border-radius: 12px;
+  padding: 8px 14px;
+  min-width: 72px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.nav-item i {
+  font-size: 20px;
+}
+.nav-item span {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.28);
+  color: #3e2618;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.nav-item.active {
+  background: rgba(255, 255, 255, 0.4);
+  color: #2f1c12;
+  border-color: #8f6543;
+}
+
+#categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.category {
+  border: 1px solid #c7a486;
+  background: rgba(255, 255, 255, 0.9);
+  color: #2a1a12;
+  padding: 14px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  text-align: center;
+
+}
+
+
+.category-title {
+
+font-weight: 8;
+font-size: 20px;
+
+}
+
+.category img {
+
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+.category p {
+
+font-size: 14px;
+
+
+}
+
+.category:hover {
+  background: #f4ebe3;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}

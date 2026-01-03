@@ -1,0 +1,62 @@
+[
+  {
+    "ProductName": "Large Cappuccino",
+    "CategoryId": 1,
+    "Price": "14.00"
+  },
+  {
+    "ProductName": "Iced Coffee",
+    "CategoryId": 1,
+    "Price": "18.00"
+  },
+  {
+    "ProductName": "Chocolate Croissant",
+    "CategoryId": 2,
+    "Price": "16.00"
+  },
+  {
+    "ProductName": "Cheese Pastry",
+    "CategoryId": 2,
+    "Price": "14.00"
+  },
+  {
+    "ProductName": "Caesar Salad",
+    "CategoryId": 3,
+    "Price": "45.00"
+  },
+  {
+    "ProductName": "Halloumi Salad",
+    "CategoryId": 3,
+    "Price": "48.00"
+  },
+  {
+    "ProductName": "Omelet Sandwich",
+    "CategoryId": 4,
+    "Price": "28.00"
+  },
+  {
+    "ProductName": "Salmon Sandwich",
+    "CategoryId": 4,
+    "Price": "36.00"
+  },
+  {
+    "ProductName": "Classic Toast",
+    "CategoryId": 5,
+    "Price": "32.00"
+  },
+  {
+    "ProductName": "Pesto Toast",
+    "CategoryId": 5,
+    "Price": "34.00"
+  },
+  {
+    "ProductName": "Israeli Breakfast",
+    "CategoryId": 6,
+    "Price": "62.00"
+  },
+  {
+    "ProductName": "Home-style Shakshuka",
+    "CategoryId": 6,
+    "Price": "58.00"
+  }
+]
