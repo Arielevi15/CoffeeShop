@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Outfit', sans-serif;
-    background-color: #e5e5e5;
+    background-color: #d9c2aa;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,10 +17,12 @@ body {
     padding-bottom: 110px; /* מפנה מקום לפוטר */
 }
 
+
+
 .wallet-wrapper {
     background: white;
     width: 100%;
-    max-width: 380px;
+    max-width: fit-content;
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 10px 40px rgba(0,0,0,0.1);
@@ -53,6 +55,7 @@ body {
     padding: 10px 15px;
     border-radius: 12px;
     color: var(--dark);
+    margin: 10px;
 }
 
 .current-balance .label {
@@ -214,4 +217,72 @@ h2 {
   color: #2f1c12;
   border-color: #8f6543;
 }
+
+/* --- רספונסיביות מעודכנת --- */
+
+@media screen and (max-width: 480px) {
+    body {
+        padding-bottom: 90px; /* צמצום המרווח בטלפונים קטנים */
+    }
+
+    .wallet-wrapper {
+        max-width: 90%; /* תפיסת רוב רוחב המסך */
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .header h1 {
+        font-size: 1.25rem;
+    }
+
+    .current-balance .value {
+        font-size: 1.1rem;
+    }
+
+    .price {
+        font-size: 1.2rem;
+    }
+
+    .pay-btn {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    /* התאמת הפוטר למסכים קטנים - צמצום הריווחים */
+    .nav-item {
+        min-width: 60px;
+        padding: 6px 10px;
+    }
+    
+    .nav-item i {
+        font-size: 18px;
+    }
+    
+    .nav-item span {
+        font-size: 10px;
+    }
+}
+
+/* התאמה למכשירים במצב אופקי (Landscape) */
+@media screen and (max-height: 600px) {
+    body {
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+    
+    .wallet-wrapper {
+        margin-bottom: 100px;
+    }
+}
+
+
+/* טיפול במסכים רחבים (טאבלטים ומעלה) */
+@media screen and (min-width: 769px) {
+    
+    .wallet-wrapper {
+        max-width: 500px; /* הגדלה קלה של הקונטיינר במסכים גדולים */
+    }
+}
+
+
 

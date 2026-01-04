@@ -6,7 +6,7 @@ async function loadCategories() {
   container.textContent = 'Loading...';
 
   try {
-    const res = await fetch('extra/categories.json');
+    const res = await fetch('/extra/categories.json');
      
     if (!res.ok) throw new Error(res.statusText);
     const data = await res.json();
