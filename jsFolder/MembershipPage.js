@@ -8,6 +8,7 @@ if (!user || typeof user.balance !== "number") {
     membership: "Gold",
     member_since: "2021-05-15",
     balance: 2500,
+    orders: []
   };
   localStorage.setItem("user", JSON.stringify(user));
 }

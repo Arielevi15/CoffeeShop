@@ -1,40 +1,46 @@
 {
   "menu_categories": [
     {
+      "id": 1,
       "topic": "Hot Drinks",
       "picture": "/images/hot_drinks.png",
       "information": "A selection of warming beverages including specialty coffees, herbal teas, and rich hot chocolates."
     },
     {
+      "id": 2,
       "topic": "Cold Drinks",
       "picture": "/images/cold_drinks.png",
       "information": "Refreshing iced coffees, seasonal fruit smoothies, artisan sodas, and chilled mineral waters."
     },
     {
+      "id": 3,
       "topic": "Bakery",
       "picture": "/images/bakery_items.png",
       "information": "Freshly baked daily, featuring buttery croissants, sourdough loaves, and a variety of sweet pastries."
     },
     {
+      "id": 4,
       "topic": "Salads",
       "picture": "/images/Salad.png",
       "information": "Vibrant, nutrient-dense bowls made with local greens, toasted nuts, and house-made dressings."
     },
     {
+      "id": 5,
       "topic": "Sandwiches",
       "picture": "/images/Sandwiches.png",
       "information": "Classic and gourmet fillings served on artisan bread, available toasted or fresh."
     },
     {
+      "id": 6,
       "topic": "Breakfast",
       "picture": "/images/israeliBF.png",
       "information": "Hearty morning favorites ranging from yogurt parfaits to warm oatmeals and egg-based dishes."
     },
     {
+      "id": 7,
       "topic": "Toasts",
       "picture": "/images/toasts.png",
       "information": "Thick-cut artisan slices topped with options like smashed avocado, nut butters, or savory spreads."
     }
-    
   ]
 }

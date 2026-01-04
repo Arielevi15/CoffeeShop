@@ -5,6 +5,7 @@ const defaultUser = {
   membership: "Gold",
   member_since: "2021-05-15",
   balance: 2500,
+  orders: []
 };
 
 let user = JSON.parse(localStorage.getItem("user"));

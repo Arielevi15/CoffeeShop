@@ -1,8 +1,10 @@
+  const container = document.getElementById('categories');
+
+
 document.addEventListener('DOMContentLoaded', loadCategories);
 
 async function loadCategories() {
 
-  const container = document.getElementById('categories');
   container.textContent = 'Loading...';
 
   try {
@@ -20,14 +22,35 @@ async function loadCategories() {
 
 
     container.innerHTML = items.map(item => 
-
-      `<div class="category">
+     `<div class="category">
         <span class="category-title">${item.topic}</span>
         <img src="${item.picture}"/>
         <p class="category-info">${item.information}</p>
-      </div>`
+      </div>  `
 
     ).join('');
+
+
+
+  container.addEventListener('click', (event) => {
+
+
+  const categoryDiv = event.target.closest('.category');
+
+
+  const item = categoryDiv.dataset.id;
+
+
+
+
+
+
+ 
+  window.location.href = '/HtmlFolder/products.html';
+
+
+});
+
 
   } catch (err) {
     container.textContent = 'Failed to load categories.';
@@ -35,3 +58,8 @@ async function loadCategories() {
   }
 
 }
+
+
+
+
+

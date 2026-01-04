@@ -1,54 +1,146 @@
 [
   {
+    "ProductName": "Small Cappuccino",
+    "CategoryId": 1,
+    "Price": "12.00"
+  },
+  {
     "ProductName": "Large Cappuccino",
     "CategoryId": 1,
     "Price": "14.00"
   },
   {
-    "ProductName": "Iced Coffee",
+    "ProductName": "Espresso Double",
     "CategoryId": 1,
+    "Price": "10.00"
+  },
+  {
+    "ProductName": "Hot Chocolate",
+    "CategoryId": 1,
+    "Price": "16.00"
+  },
+  {
+    "ProductName": "Mint Tea",
+    "CategoryId": 1,
+    "Price": "12.00"
+  },
+  {
+    "ProductName": "Americano",
+    "CategoryId": 1,
+    "Price": "12.00"
+  },
+  {
+    "ProductName": "Latte Macchiato",
+    "CategoryId": 1,
+    "Price": "15.00"
+  },
+
+  
+  {
+    "ProductName": "Iced Coffee",
+    "CategoryId": 2,
     "Price": "18.00"
   },
   {
-    "ProductName": "Chocolate Croissant",
+    "ProductName": "Cold Brew",
     "CategoryId": 2,
     "Price": "16.00"
   },
   {
-    "ProductName": "Cheese Pastry",
+    "ProductName": "Fresh Orange Juice",
     "CategoryId": 2,
+    "Price": "18.00"
+  },
+  {
+    "ProductName": "Lemonade with Mint",
+    "CategoryId": 2,
+    "Price": "15.00"
+  },
+  {
+    "ProductName": "Fruit Smoothie",
+    "CategoryId": 2,
+    "Price": "22.00"
+  },
+
+  {
+    "ProductName": "Chocolate Croissant",
+    "CategoryId": 3,
+    "Price": "16.00"
+  },
+  {
+    "ProductName": "Cheese Pastry",
+    "CategoryId": 3,
     "Price": "14.00"
   },
   {
-    "ProductName": "Caesar Salad",
+    "ProductName": "Almond Croissant",
     "CategoryId": 3,
+    "Price": "18.00"
+  },
+  {
+    "ProductName": "Cinnamon Roll",
+    "CategoryId": 3,
+    "Price": "16.00"
+  },
+  {
+    "ProductName": "Blueberry Muffin",
+    "CategoryId": 3,
+    "Price": "14.00"
+  },
+
+  {
+    "ProductName": "Caesar Salad",
+    "CategoryId": 4,
     "Price": "45.00"
   },
   {
     "ProductName": "Halloumi Salad",
-    "CategoryId": 3,
+    "CategoryId": 4,
     "Price": "48.00"
   },
   {
-    "ProductName": "Omelet Sandwich",
+    "ProductName": "Greek Salad",
     "CategoryId": 4,
+    "Price": "42.00"
+  },
+  {
+    "ProductName": "Quinoa & Sweet Potato",
+    "CategoryId": 4,
+    "Price": "46.00"
+  },
+  {
+    "ProductName": "Tuna Salad",
+    "CategoryId": 4,
+    "Price": "44.00"
+  },
+
+  {
+    "ProductName": "Omelet Sandwich",
+    "CategoryId": 5,
     "Price": "28.00"
   },
   {
     "ProductName": "Salmon Sandwich",
-    "CategoryId": 4,
+    "CategoryId": 5,
     "Price": "36.00"
   },
   {
-    "ProductName": "Classic Toast",
-    "CategoryId": 5,
-    "Price": "32.00"
-  },
-  {
-    "ProductName": "Pesto Toast",
+    "ProductName": "Avocado Sandwich",
     "CategoryId": 5,
     "Price": "34.00"
   },
+  {
+    "ProductName": "Tuna Sandwich",
+    "CategoryId": 5,
+    "Price": "30.00"
+  },
+  {
+    "ProductName": "Sabich Sandwich",
+    "CategoryId": 5,
+    "Price": "32.00"
+  },
+
+ 
   {
     "ProductName": "Israeli Breakfast",
     "CategoryId": 6,
@@ -58,5 +150,47 @@
     "ProductName": "Home-style Shakshuka",
     "CategoryId": 6,
     "Price": "58.00"
+  },
+  {
+    "ProductName": "Morning Muesli",
+    "CategoryId": 6,
+    "Price": "38.00"
+  },
+  {
+    "ProductName": "Eggs Benedict",
+    "CategoryId": 6,
+    "Price": "64.00"
+  },
+  {
+    "ProductName": "Pancakes Stack",
+    "CategoryId": 6,
+    "Price": "42.00"
+  },
+
+  
+  {
+    "ProductName": "Classic Toast",
+    "CategoryId": 7,
+    "Price": "32.00"
+  },
+  {
+    "ProductName": "Pesto Toast",
+    "CategoryId": 7,
+    "Price": "34.00"
+  },
+  {
+    "ProductName": "Mozzarella Toast",
+    "CategoryId": 7,
+    "Price": "36.00"
+  },
+  {
+    "ProductName": "Pizza Toast",
+    "CategoryId": 7,
+    "Price": "34.00"
+  },
+  {
+    "ProductName": "Mushroom Toast",
+    "CategoryId": 7,
+    "Price": "35.00"
   }
 ]
