@@ -2,7 +2,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     const graphCanvas = document.getElementById("habitsChart").getContext("2d");
-    const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+
+    labels = getProductNames();
 
     const stackedBar = new Chart(graphCanvas, {
         type: 'bar',
@@ -31,3 +32,21 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 
+
+function getProductNames(){
+
+   const user = JSON.parse(localStorage.getItem("user"));
+   const items = user.orders;
+   const productsArr = [];
+
+   items.forEach(item => {
+    
+    productsArr.push(item.productName);
+
+   });
+
+
+   console.log(productsArr);
+
+   return productsArr;
+}

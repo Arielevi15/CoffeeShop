@@ -1,16 +1,26 @@
-function addOrder(order) {
-    let user = JSON.parse(localStorage.getItem("user"));
+const ordersContainer = document.getElementById("orders"); 
+const user = JSON.parse(localStorage.getItem("user"));
 
-    if (!user.orders) user.orders = [];
+const items = user.orders;
+items.forEach(p => {
+    const orderDiv = document.createElement("div");
+    orderDiv.className = "order-item";
 
-    if (amount <= 0) return { ok: false, reason: "invalid amount" };
-    if (balance < amount) return { ok: false, reason: "insufficient funds" };
+    const name = document.createElement("span");
+    name.className = "order-name";
+    name.textContent = p.productName;
 
-    user.balance = balance - amount;
+    const price = document.createElement("span");
+    price.className = "order-price";
+    price.textContent = `${p.price} ₪`;
 
-    user.orders.push(order);
+    const imgEl = document.createElement("img");
+    imgEl.src = p.image;
+    imgEl.alt = p.productName;
+    imgEl.className = "order-image";
+
+    orderDiv.append(name, price, imgEl);
+    ordersContainer.appendChild(orderDiv);
 
     
-    localStorage.setItem("user", JSON.stringify(user));
-    return {ok: true,balance: user.balance,orders: user.orders.length}
-}
+})
