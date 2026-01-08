@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const graphCanvas = document.getElementById("habitsChart").getContext("2d");
 
     labels = getProductNames();
+    productCounts = countProductFunc();
 
     const stackedBar = new Chart(graphCanvas, {
         type: 'bar',
@@ -11,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             labels: labels,
             datasets: [{
                 label: 'Monthly Orders',
-                data: [65, 59, 80, 81, 56, 55, 40], // הנתונים שלך
+                data: user.orders, // הנתונים שלך
                 backgroundColor: 'rgba(230, 126, 34, 0.7)', // צבע כתום תואם למיתוג
                 borderColor: '#e67e22',
                 borderWidth: 1
@@ -41,7 +42,9 @@ function getProductNames(){
 
    items.forEach(item => {
     
-    productsArr.push(item.productName);
+    if(!productsArr.includes(item.productName)){
+            productsArr.push(item.productName);
+    }
 
    });
 
