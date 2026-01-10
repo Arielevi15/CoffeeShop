@@ -1,0 +1,142 @@
+[
+  {
+    "Date": "01/11/2025",
+    "ProductName": "Large Cappuccino",
+    "Category": 1,
+    "Price": "14.00",
+    "Image": "/images/Large_Cappuccino.png"
+  },
+  {
+    "Date": "03/11/2025",
+    "ProductName": "Chocolate Croissant",
+    "Category": 2,
+    "Price": "16.00",
+    "Image": "/images/Chocolate_Croissant.png"
+  },
+  {
+    "Date": "05/11/2025",
+    "ProductName": "Classic Toast",
+    "Category": 5,
+    "Price": "32.00",
+    "Image": "/images/classic_toast.png"
+  },
+  {
+    "Date": "08/11/2025",
+    "ProductName": "Iced Coffee",
+    "Category": 1,
+    "Price": "18.00",
+    "Image": "/images/Iced_Coffee.png"
+  },
+  {
+    "Date": "12/11/2025",
+    "ProductName": "Caesar Salad",
+    "Category": 3,
+    "Price": "45.00",
+    "Image": "/images/Caesar_Salad.png"
+  },
+  {
+    "Date": "15/11/2025",
+    "ProductName": "Omelet Sandwich",
+    "Category": 4,
+    "Price": "28.00",
+    "Image": "/images/omlet_sandwich.png"
+  },
+  {
+    "Date": "20/11/2025",
+    "ProductName": "Cheese Pastry",
+    "Category": 2,
+    "Price": "14.00",
+    "Image": "/images/Cheese_Pastry.png"
+  },
+  {
+    "Date": "25/11/2025",
+    "ProductName": "Israeli Breakfast",
+    "Category": 6,
+    "Price": "62.00",
+    "Image": "/images/israeliBF.png"
+  },
+  {
+    "Date": "28/11/2025",
+    "ProductName": "Large Cappuccino",
+    "Category": 1,
+    "Price": "14.00",
+    "Image": "/images/Large_Cappuccino.png"
+  },
+  {
+    "Date": "30/11/2025",
+    "ProductName": "Pesto Toast",
+    "Category": 5,
+    "Price": "34.00",
+    "Image": "/images/pesto_toast.png"
+  },
+  {
+    "Date": "02/12/2025",
+    "ProductName": "Home-style Shakshuka",
+    "Category": 6,
+    "Price": "58.00",
+    "Image": "/images/shashuka.png"
+  },
+  {
+    "Date": "05/12/2025",
+    "ProductName": "Salmon Sandwich",
+    "Category": 4,
+    "Price": "36.00",
+    "Image": "/images/salmon_sandwich.png"
+  },
+  {
+    "Date": "08/12/2025",
+    "ProductName": "Halloumi Salad",
+    "Category": 3,
+    "Price": "48.00",
+    "Image": "/images/halloumi_Salad.png"
+  },
+  {
+    "Date": "12/12/2025",
+    "ProductName": "Chocolate Croissant",
+    "Category": 2,
+    "Price": "16.00",
+    "Image": "/images/Chocolate_Croissant.png"
+  },
+  {
+    "Date": "14/12/2025",
+    "ProductName": "Iced Coffee",
+    "Category": 1,
+    "Price": "18.00",
+    "Image": "/images/Iced_Coffee.png"
+  },
+  {
+    "Date": "18/12/2025",
+    "ProductName": "Classic Toast",
+    "Category": 5,
+    "Price": "32.00",
+    "Image": "/images/classic_toast.png"
+  },
+  {
+    "Date": "21/12/2025",
+    "ProductName": "Large Cappuccino",
+    "Category": 1,
+    "Price": "14.00",
+    "Image": "/images/Large_Cappuccino.png"
+  },
+  {
+    "Date": "24/12/2025",
+    "ProductName": "Cheese Pastry",
+    "Category": 2,
+    "Price": "14.00",
+    "Image": "/images/Cheese_Pastry.png"
+  },
+  {
+    "Date": "27/12/2025",
+    "ProductName": "Omelet Sandwich",
+    "Category": 4,
+    "Price": "28.00",
+    "Image": "/images/omlet_sandwich.png"
+  },
+  {
+    "Date": "30/12/2025",
+    "ProductName": "Caesar Salad",
+    "Category": 3,
+    "Price": "45.00",
+    "Image": "/images/Caesar_Salad.png"
+  }
+]

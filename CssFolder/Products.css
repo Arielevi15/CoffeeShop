@@ -52,6 +52,13 @@ body {
   font-weight: 600;
 }
 
+.nav-item a {
+  text-decoration: none; 
+    color: inherit;        
+    display: flex;       
+    align-items: center;
+}
+
 .nav-item:hover {
   background: rgba(255, 255, 255, 0.28);
   color: #3e2618;

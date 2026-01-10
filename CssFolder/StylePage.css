@@ -110,6 +110,44 @@ body {
   transition: 0.3s;
 }
 
+/* --- עיצוב כפתור המתנה היומית (ה-Input הקיים שלך) --- */
+#DailyGift {
+    background: linear-gradient(135deg, #6F4E37 0%, #8B5A2B 100%); /* גרדיאנט חום יוקרתי */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px; /* כפתור עגול */
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 10px;
+    outline: none;
+}
+
+#DailyGift:hover {
+    transform: scale(1.05); /* הגדלה קטנה */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* --- עיצוב הודעת הזכייה --- */
+#gift-message {
+    margin-top: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    min-height: 25px; /* שומר מקום כדי שהכרטיס לא יקפוץ */
+    color: #2e7d32;   /* ירוק להודעת הצלחה */
+    transition: opacity 0.5s;
+}
+
+/* קלאס עזר לטקסט אפור (כשהמתנה כבר נלקחה) */
+.gift-claimed-text {
+    color: #7f8c8d !important;
+    font-size: 0.9rem;
+}
+
+
 .orders,
 .clubMembership {
   background: white;
@@ -215,6 +253,13 @@ body {
   cursor: pointer;
   transition: all 0.2s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.nav-item a {
+  text-decoration: none; 
+    color: inherit;        
+    display: flex;       
+    align-items: center;
 }
 
 .nav-item i {

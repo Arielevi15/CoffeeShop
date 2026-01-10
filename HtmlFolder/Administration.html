@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Products</title>
-  <link rel="stylesheet" href="/CssFolder/Products.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CssFolder/Administration.css">    
+    <script src="/jsFolder/Administration.js" defer></script>
+
 </head>
 <body>
+
     
-  <main style="padding: 20px 20px 140px 20px;">
+    
+    <button onclick=loadOrders()>Load Orders</button>
+    <button onclick="">Load Categories</button>
+    <section id="orders"></section>
 
-    <section id="products"></section>
+ <!-- Footer and navigator -->
 
-  
-  </main>
-
-  <!-- Footer and navigator -->
-
-    <div id="footer" class="footer">
+   <div id="footer" class="footer">
       <div class="nav-item">
         <i class="fas fa-home"></i>
         <a href="/HtmlFolder/HomePage.html"><span>HOME</span></a>
@@ -46,6 +48,5 @@
 
       
     </div>
-      <script src="/jsFolder/products.js" defer></script>
 </body>
 </html>
