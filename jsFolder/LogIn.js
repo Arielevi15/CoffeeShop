@@ -9,7 +9,7 @@ const defaultUser = {
   orders: []
 };
 
-// Importing the user or creation one if not exists
+// בדיקה האם המשתמש קיים, אם לא, ייצור אחד
 let user = JSON.parse(localStorage.getItem("user"));
 if (!user) {
   user = defaultUser;
@@ -18,8 +18,9 @@ if (!user) {
 
 console.log("Current user:", user);
 
+//פעולת ההתחברות
 function login() {
-    //Clear previous error messages
+    //מנקה את הודעות השגיאה הקיימות אם יש
     const existingErrors = document.querySelectorAll(".error-msg");
     existingErrors.forEach(error => error.remove());
 
@@ -29,24 +30,24 @@ function login() {
     
     let isValid = true; 
 
-    // Email Check: Not empty and contains @
+    // בודק האם המייל מכיל את התו @
     if (emailInput === "" || !emailInput.includes('@')) {
         showError("UserId", "Please enter a valid email address (must contain '@').");
         isValid = false;
     }
 
-    // Password Check: Not empty and at least 8 characters
+    // בודק האם אורך הסיסמא הינה 8 תווים לפחות
     if (passwordInput === "" || passwordInput.length < 8) {
         showError("UserPass", "Password must be at least 8 characters long.");
         isValid = false;
     }
 
-    // If format is invalid, stop here
+    // דגל לכך שניתן להמשיך
     if (!isValid) {
         return;
     }
 
-    
+    //בדיקה לקלט המשתמש האם שווה לנתוני המשתמש הקיים במערכת, אם כן , ניתוב לעמוד הבית
     if (emailInput === user.email && passwordInput === user.password) {
         alert("Login successful!");
         window.location.href = "/HtmlFolder/HomePage.html"; 
@@ -60,7 +61,7 @@ function login() {
     }
 }
 
-//function to display errors
+//פונקציה היוצרת את הודעות השגיאה וממקמת אותן מתחת לשדות הקלט
 function showError(containerId, message) {
     let container = document.getElementById(containerId);
     let divAlert = document.createElement("div");

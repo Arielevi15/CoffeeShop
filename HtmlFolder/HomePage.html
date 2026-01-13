@@ -5,7 +5,8 @@
     <link rel="stylesheet" href="/CssFolder/StylePage.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
   </head>
@@ -19,19 +20,8 @@
       <h1>Gittery Squirrel Coffee and co.</h1>
     </div>
 
-    <nav id="sidebar" class="sidebar">
-      <div class="close-btn" onclick="toggleSidebar()">
-        <i class="fas fa-times"></i>
-      </div>
-
-      <div class="menu-content">
-        <h3>menu</h3>
-        <a href="#">Orders</a>
-        <a href="/HtmlFolder/category.html"> Categories</a>
-      </div>
-    </nav>
-
-    <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
+   
+   
 
     <!-- Main dashboard -->
 
@@ -39,7 +29,10 @@
       <div class="welcome dash-card">
         <h2 id="date"></h2>
         <h2><span id="user"></span> and welcome to Our Coffee Shop</h2>
-        <p>Discover the finest coffee blends with frogs and enjoy a cozy atmosphere with Sandy.</p>
+        <p>
+          Discover the finest coffee blends with frogs and enjoy a cozy
+          atmosphere with Sandy.
+        </p>
       </div>
 
       <!--
@@ -50,26 +43,28 @@
         
         -->
       <div class="logo">
-        <video id="myLogoVideo" muted playsinline>
+        <video id="myLogoVideo" muted playsinline autoplay preload="auto">
           <source src="/images/logo_div_LogoAnimation.mp4" type="video/mp4" />
         </video>
       </div>
 
-
-
-      
-
       <div class="orders_clubMembership">
         <div class="orders dash-card">
           <h3>Daily Gift</h3>
-          <input type="button" value="Daily Gift" onclick="DailyGift()" id="DailyGift"/>
+          <input
+            type="button"
+            value="Daily Gift"
+            onclick="DailyGift()"
+            id="DailyGift"
+          />
           <div id="gift-message"></div>
         </div>
-        <div class="clubMembership dash-card" id="clubMembership dash-card"><span id="membershipDetails"></span></div>
+        <div class="clubMembership dash-card" id="clubMembership dash-card">
+          <span id="membershipDetails"></span>
+        </div>
       </div>
 
       <div class="histogramGraph">
-
         <div>
           <h3>histogramGraph of orders</h3>
         </div>
@@ -77,13 +72,10 @@
         <div class="graph-container">
           <canvas id="habitsChart"></canvas>
         </div>
-
       </div>
-
     </div>
 
-    
-    <!-- Footer and navigator -->
+  <!-- פוטר דביק למעבר בין עמודים -->
 
     <div id="footer" class="footer">
       <div class="nav-item">
@@ -106,20 +98,16 @@
         <a href="/HtmlFolder/MyOrdersPage.html"><span>My Orders</span></a>
       </div>
 
-       <div class="nav-item">
+      <div class="nav-item">
         <i class="fas fa-user-cog"></i>
         <a href="/HtmlFolder/Administration.html"><span>Admin Page</span></a>
       </div>
-
-      
     </div>
-
 
     <!-- Script linkings -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-     <script src="/jsFolder/Graph.js"></script>
+    <script src="/jsFolder/Graph.js"></script>
     <script src="/jsFolder/JSPage.js"></script>
     <script src="/jsFolder/UserJS.js"></script>
-    
   </body>
 </html>

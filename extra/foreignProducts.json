@@ -1,0 +1,130 @@
+{
+  "products_menu": [
+    {
+      "ProductName": "Caffè Latte",
+      "CategoryId": 1,
+      "Price": "15.00",
+      "image": ""
+    },
+    {
+      "ProductName": "Americano",
+      "CategoryId": 1,
+      "Price": "11.00",
+      "image": ""
+    },
+    {
+      "ProductName": "Hot Chocolate",
+      "CategoryId": 1,
+      "Price": "16.00",
+      "image": ""
+    },
+    {
+      "ProductName": "Fruit Smoothie",
+      "CategoryId": 2,
+      "Price": "22.00",
+      "image": ""
+    },
+    {
+      "ProductName": "Iced Tea Peach",
+      "CategoryId": 2,
+      "Price": "14.00",
+      "image": ""
+    },
+    {
+      "ProductName": "Lemonade",
+      "CategoryId": 2,
+      "Price": "12.00",
+      "image": ""
+    },
+    {
+      "ProductName": "Cinnamon Roll",
+      "CategoryId": 3,
+      "Price": "18.00",
+      "image": ""
+    },
+    {
+      "ProductName": "Blueberry Muffin",
+      "CategoryId": 3,
+      "Price": "15.00",
+      "image": ""
+    },
+    {
+      "ProductName": "Chocolate Chip Cookie",
+      "CategoryId": 3,
+      "Price": "12.00",
+      "image": ""
+    },
+    {
+      "ProductName": "Tuna Salad",
+      "CategoryId": 4,
+      "Price": "44.00",
+      "image": ""
+    },
+    {
+      "ProductName": "Quinoa & Sweet Potato Salad",
+      "CategoryId": 4,
+      "Price": "46.00",
+      "image": ""
+    },
+    {
+      "ProductName": "Health Salad",
+      "CategoryId": 4,
+      "Price": "40.00",
+      "image": ""
+    },
+    {
+      "ProductName": "Tuna Sandwich",
+      "CategoryId": 5,
+      "Price": "32.00",
+      "image": ""
+    },
+    {
+      "ProductName": "Sabich Sandwich",
+      "CategoryId": 5,
+      "Price": "30.00",
+      "image": ""
+    },
+    {
+      "ProductName": "Yellow Cheese & Pesto Wrap",
+      "CategoryId": 5,
+      "Price": "28.00",
+      "image": ""
+    },
+    {
+      "ProductName": "Fluffy Pancakes",
+      "CategoryId": 6,
+      "Price": "45.00",
+      "image": ""
+    },
+    {
+      "ProductName": "Balkan Shakshuka",
+      "CategoryId": 6,
+      "Price": "62.00",
+      "image": ""
+    },
+    {
+      "ProductName": "French Toast",
+      "CategoryId": 6,
+      "Price": "42.00",
+      "image": ""
+    },
+    {
+      "ProductName": "Pizza Toast",
+      "CategoryId": 7,
+      "Price": "36.00",
+      "image": ""
+    },
+    {
+      "ProductName": "Tuna & Onion Toast",
+      "CategoryId": 7,
+      "Price": "38.00",
+      "image": ""
+    },
+    {
+      "ProductName": "Balkan Toast (Feta & Olives)",
+      "CategoryId": 7,
+      "Price": "37.00",
+      "image": ""
+    }
+  ]
+}

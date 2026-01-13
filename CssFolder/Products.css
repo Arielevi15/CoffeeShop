@@ -117,3 +117,98 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
+
+
+/* --- התאמות למסכים קטנים (טלפונים) - עד 480px --- */
+@media (max-width: 480px) {
+  /* 1. התאמת הגריד של המוצרים */
+  #products {
+    /* הורדנו את המינימום ל-140px כדי שייכנסו 2 מוצרים בשורה ברוב הטלפונים */
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px; /* רווח קטן יותר בין מוצרים */
+    padding: 0 5px; /* קצת מרווח מהצדדים של המסך */
+  }
+
+  /* 2. הקטנת כרטיס המוצר */
+  .product {
+    padding: 10px 8px; /* פחות "אוויר" בתוך הכרטיס */
+  }
+
+  /* 3. הקטנת תמונת המוצר */
+  .product img {
+    height: 140px; /* תמונה נמוכה יותר כדי לא לתפוס את כל המסך */
+  }
+
+  /* 4. התאמת הפונטים */
+  .product-name {
+    font-size: 14px; /* שם מוצר קטן יותר */
+  }
+  
+  .product-price {
+    font-size: 14px;
+  }
+
+  /* 5. התאמת הפוטר */
+  .footer {
+    padding: 8px 0; /* פוטר דק יותר */
+  }
+  
+  .nav-item {
+    min-width: auto; /* מבטל את הרוחב המינימלי */
+    padding: 6px 10px;
+    background: transparent; /* מנקה את הרקע בטלפון למראה נקי יותר */
+    border: none;
+    box-shadow: none;
+  }
+  
+  /* הדגשה קלה לפריט פעיל בטלפון */
+  .nav-item.active {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+  }
+}
+
+/* --- התאמות לטאבלטים (768px עד 1024px) --- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  #products {
+    gap: 20px; /* רווח בינוני */
+    /* כאן 180px זה בסדר, לרוב ייכנסו 3-4 מוצרים בשורה */
+  }
+}
+
+/* --- התאמות למחשבים ומסכים רחבים (מעל 1025px) --- */
+@media (min-width: 1025px) {
+  #products {
+    gap: 24px; /* רווח גדול ומרווח */
+    max-width: 1200px; /* שהמוצרים לא יימרחו לכל רוחב המסך */
+    margin: 20px auto; /* מירכוז הגריד */
+  }
+
+  .product img {
+    height: 220px; /* תמונות גדולות ומרשימות יותר */
+    transition: transform 0.3s;
+  }
+
+  /* אפקט זום עדין לתמונה במעבר עכבר במחשב */
+  .product:hover img {
+    transform: scale(1.05);
+  }
+
+  /* שיפור מראה הפוטר במחשב */
+  .footer {
+    justify-content: center; /* ממרכז את הכפתורים */
+    gap: 40px; /* רווח גדול בין הכפתורים */
+    background: rgba(255, 255, 255, 0.95); /* רקע כמעט לבן ונקי */
+  }
+
+  .nav-item {
+    flex-direction: row; /* אייקון ליד הטקסט במקום מעליו */
+    gap: 10px;
+    padding: 10px 20px;
+    width: auto; /* רוחב לפי התוכן */
+  }
+  
+  .nav-item span {
+    font-size: 14px; /* טקסט קריא יותר */
+  }
+}

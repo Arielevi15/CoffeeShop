@@ -11,6 +11,67 @@ body {
   );
   color: #2a1a12;
   padding-bottom: 110px;
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* מרכוז אופקי */
+  justify-content: center;
+  gap: 10px;
+}
+
+
+.drop-area {
+    width: 250px; /* רוחב קטן יותר */
+    min-height: 80px; /* גובה נמוך יותר */
+    border: 2px dashed #bbb;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #555;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* הקטנת הטקסט בפנים */
+.drop-area p {
+    margin: 0;
+    font-size: 0.9rem; /* טקסט קטן יותר */
+    font-weight: 500;
+    pointer-events: none; /* מונע בעיות גרירה על הטקסט */
+}
+
+/* אפקט ריחוף */
+.drop-area:hover {
+    border-color: #4a90e2;
+    background-color: #f0f7ff;
+    color: #4a90e2;
+}
+
+/* מצב גרירה מעל */
+.drop-area.drag-over {
+    border-color: #2ecc71;
+    background-color: #e8fcf0;
+    transform: scale(1.05);
+}
+
+/* עיצוב רשימת הקבצים */
+#file-list {
+    width: 250px;
+    margin-top: 10px;
+}
+
+.file-item {
+    background: #e0e0e0;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer {

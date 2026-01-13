@@ -1,28 +1,15 @@
-function toggleSidebar() {
-    const sidebar = document.getElementById("sidebar");
-    const overlay = document.getElementById('overlay');
-    sidebar.classList.toggle("active");
-    overlay.classList.toggle('active');
-}
 
+// מחכה שה-HTML של הדף ייטען במלואו לפני שמנסים לגשת לאלמנטים
+window.addEventListener("DOMContentLoaded", () => {
+  const video = document.getElementById("myLogoVideo");
+  // בדיקת בטיחות: אם הוידאו לא נמצא בדף, יוצאים כדי למנוע קריסה
+  if (!video) return;
 
-
-const video = document.getElementById('myLogoVideo');
-
-// 1. הפעלה בלחיצה
-video.addEventListener('click', () => {
-    // אם הוידאו כרגע רץ, נחזיר אותו להתחלה (אופציונלי)
-    if (!video.paused) {
-        video.currentTime = 0;
-    }
-    video.play(); // מפעיל את הוידאו
+  // מנסה לנגן את הוידאו. ה-catch משתיק שגיאות אם הדפדפן חוסם ניגון אוטומטי
+  video.play().catch(() => {});
+  // מאזין לאירוע סיום הוידאו
+  video.addEventListener("ended", () => {
+    // כשהוידאו נגמר, מחזיר אותו להתחלה (שלא ייתקע על הפריים האחרון)
+    video.currentTime = 0;
+  });
 });
-
-// 2. איפוס בסוף הניגון
-video.addEventListener('ended', () => {
-    video.currentTime = 0; // מחזיר לפריים הראשון (התמונה הסטטית)
-    // הוידאו עוצר אוטומטית כשהוא מסתיים, אז לא צריך פקודת stop
-});
-
-
-

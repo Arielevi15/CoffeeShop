@@ -359,3 +359,71 @@ body {
 
 
 
+
+
+@media (max-width: 480px) {
+  /* צמצום שוליים כדי לנצל את רוחב המסך */
+  body {
+    padding: 10px 5px 90px 5px; /* פחות padding בצדדים */
+  }
+
+  /* התאמת הפוטר - הקטנת טקסט ואייקונים */
+  .footer {
+    padding: 8px 0;
+  }
+
+  .nav-item {
+    min-width: auto; /* ביטול רוחב מינימלי */
+    padding: 6px 10px;
+  }
+
+  .nav-item span {
+    font-size: 10px; /* טקסט קטן יותר */
+  }
+
+  .nav-item i {
+    font-size: 18px;
+  }
+
+  /* הקטנת כפתור המתנה */
+  #DailyGift {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    width: 100%; /* כפתור רחב ללחיצה קלה */
+  }
+
+  /* התאמת תפריט הצד לרוחב המסך */
+  .sidebar {
+    width: 85%; /* במקום רוחב קבוע של 280px */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    gap: 15px; /* הקטנת הרווח בין הכרטיסים */
+    max-width: 95%; /* ניצול טוב יותר של רוחב המסך */
+  }
+
+  .logo {
+    max-width: 100%; /* הלוגו יתפוס את כל רוחב התא שלו */
+  }
+
+  /* אם יש צורך, אפשר להקטין מעט את הגרף */
+  .histogramGraph {
+    height: 300px;
+  }
+  
+  /* סידור הכפתורים של ההזמנות והחברות */
+  .orders_clubMembership {
+    flex-direction: row; /* משאיר אותם אחד ליד השני */
+    gap: 10px;
+  }
+  
+  .orders, .clubMembership {
+    padding: 10px; /* פחות ריפוד פנימי */
+    font-size: 0.9rem;
+  }
+}
+
+
+

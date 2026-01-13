@@ -105,3 +105,93 @@ body {
   object-fit: cover;
   border-radius: 6px;
 }
+
+
+/* --- התאמות לטלפונים קטנים (עד 480px) --- */
+@media (max-width: 480px) {
+  /* 1. סידור רשימת ההזמנות בטור אחד */
+  #orders {
+    /* משנים ל-1fr כדי שהכרטיס יתפוס את כל רוחב המסך בטלפון */
+    grid-template-columns: 1fr; 
+    margin: 10px; /* פחות שוליים חיצוניים */
+    gap: 10px;    /* רווח קטן יותר בין הזמנות */
+  }
+
+  /* 2. הקטנת כרטיס ההזמנה */
+  .order-item {
+    padding: 10px; /* פחות ריפוד */
+    gap: 10px;     /* קירוב התמונה לטקסט */
+    border-radius: 8px; /* פינות קצת פחות עגולות שיתאים למסך קטן */
+  }
+
+  /* 3. הקטנת התמונה כדי להשאיר מקום לטקסט */
+  .order-image {
+    width: 60px;  /* הקטנה מ-80px ל-60px */
+    height: 60px;
+  }
+
+  /* 4. הקטנת הטקסט */
+  .order-name {
+    font-size: 14px;
+  }
+  
+  .order-price {
+    font-size: 14px;
+  }
+
+  /* 5. התאמת הפוטר (כמו בדפים האחרים) */
+  .footer {
+    padding: 8px 0;
+  }
+  
+  .nav-item {
+    min-width: auto;
+    padding: 6px 10px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+}
+
+/* --- התאמות לטאבלטים (בין 481px ל-1024px) --- */
+@media (min-width: 481px) and (max-width: 1024px) {
+  #orders {
+    /* בטאבלט אפשר להציג 2 הזמנות בשורה */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+  }
+}
+
+/* --- התאמות למחשבים (מעל 1025px) --- */
+@media (min-width: 1025px) {
+  #orders {
+    /* הגבלת רוחב כדי שההזמנות לא יימרחו על כל מסך ה-4K */
+    max-width: 1000px;
+    margin: 30px auto; /* מירכוז הרשימה באמצע המסך */
+    gap: 20px;
+  }
+
+  .order-item {
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: default; /* או pointer אם לחיצה עושה משהו */
+  }
+
+  /* אפקט נחמד כשעוברים עם העכבר על הזמנה */
+  .order-item:hover {
+    transform: translateX(5px); /* תזוזה קטנה הצידה */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* הבלטה */
+    background: #fff; /* הבהרה של הרקע */
+  }
+  
+  /* שיפור הפוטר למחשב */
+  .footer {
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .nav-item {
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px 20px;
+  }
+}

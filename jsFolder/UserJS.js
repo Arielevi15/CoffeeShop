@@ -17,7 +17,7 @@ if (!user) {
 
 const embeddedUser = document.getElementById("user");
 const embeddedDate = document.getElementById("date");
-
+//פעולת ברכת שלום למשתמש, יחד עם שילוב אלמנט הזמן
 function greetUser() {
   const now = new Date();
   const hours = now.getHours();
@@ -46,7 +46,7 @@ function greetUser() {
   embeddedDate.innerHTML = now.toLocaleString("en-US");
   embeddedUser.innerHTML = `${greeting}, ${user.name}${membershipBadge}`;
 }
-
+//פעולה המראה את נתוני המנוי : יתרה, מתי הצטרף למנוי, רמת המנוי
 function showMembershipCard() {
   const membershipDetails = document.getElementById("membershipDetails");
   if (user.is_member) {
@@ -58,6 +58,7 @@ function showMembershipCard() {
   }
 }
 
+//פעולה הצובעת את כרטיס פרטי חבר המועדון לפי רמתו
 function backgroundColorByMembership() {
   const divColor = document.getElementById("clubMembership dash-card");
   if (user.is_member) {
@@ -71,6 +72,7 @@ function backgroundColorByMembership() {
   }
 }
 
+//פעולה האחראית על המתנה היומית של המשתמש 
 function DailyGift() {
   const user = JSON.parse(localStorage.getItem("user"));
   const btn = document.getElementById("DailyGift");
@@ -78,23 +80,24 @@ function DailyGift() {
   const today = new Date().toLocaleDateString("en-GB");
 
   if (user.lastBonusDate === today) {
-    // --- מצב 1: המשתמש כבר לקח מתנה היום ---
+    //  מקרה 1: המשתמש כבר לקח מתנה היום 
     btn.style.display = "none"; // הסתרת הכפתור
-    msg.textContent = "כבר לקחת את המתנה היומית. נתראה מחר! 🎁";
+    msg.textContent = "You have already taken your daily prize , come back tommorow! 🎁";
     msg.style.color = "#7f8c8d"; // אפור
-    return; // יציאה מהפונקציה כדי למנוע תביעת מתנה נוספת
+    return; // יציאה מהפונקציה כדי למנוע קבלת מתנה נוספת
   }
 
-  const bonus = Math.floor(Math.random() * 11 + 5); //Random number between 5 to 15
+  const bonus = Math.floor(Math.random() * 11 + 5); //מספר רנדומלי בין 5 ל-15
   user.balance += bonus;
-  user.lastBonusDate = today; // --- מצב 2: המשתמש לוקח מתנה לראשונה היום ---
+  user.lastBonusDate = today; //  מקרה 2: המשתמש לוקח מתנה לראשונה היום 
   localStorage.setItem("user", JSON.stringify(user));
 
-  
+  //הצלחת פעולת המתנה היומית
   btn.style.display = "none";
   msg.innerHTML = `Congrat , ${bonus}$ has been added to your balance`;
   msg.style.color = "#2e7d32";
 
+  //עדכון היתרה של המשתמש בכרטיס חבר המנוי
   const membershipSpan = document.getElementById("membershipDetails");
   if (membershipSpan) {
     membershipDetails.textContent = `Hi ${user.name}, You are a ${user.membership} member since: ${user.member_since}. You Possess: ${user.balance} Points.`;
@@ -103,6 +106,7 @@ function DailyGift() {
   }
 }
 
+//הפעלת הפעולות
 window.onload = () => {
   greetUser();
   showMembershipCard();

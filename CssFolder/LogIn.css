@@ -120,3 +120,60 @@ body {
     }
 }
     
+
+
+/* --- התאמות לטלפונים קטנים (עד 480px) --- */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 25px 20px; /* פחות ריפוד פנימי כדי לחסוך מקום */
+        width: 100%; /* ניצול מלא של רוחב המסך */
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* צל עדין יותר */
+    }
+
+    .login-header h2 {
+        font-size: 1.5rem; /* כותרת קצת יותר קטנה */
+    }
+
+    .form-group input {
+        padding: 10px; /* שדות נמוכים יותר */
+        font-size: 16px; /* מונע זום אוטומטי באייפון */
+    }
+
+    .login-btn {
+        padding: 10px;
+    }
+}
+
+/* --- התאמות לטאבלטים (481px עד 1024px) --- */
+@media (min-width: 481px) and (max-width: 1024px) {
+    .login-card {
+        max-width: 400px; /* כרטיס מעט רחב יותר בטאבלט */
+        padding: 40px;
+    }
+}
+
+/* --- התאמות למחשבים ומסכים רחבים (מעל 1025px) --- */
+@media (min-width: 1025px) {
+    .login-card {
+        /* אנימציה יפה כשפותחים את הדף או עוברים עליו */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .login-card:hover {
+        transform: translateY(-5px); /* ציפה קלה למעלה */
+        box-shadow: 0 15px 35px rgba(0,0,0,0.15); /* צל עמוק ויוקרתי */
+    }
+}
+
+/* --- תיקון קריטי: מסכים נמוכים (מצב שכיבה בטלפון) --- */
+@media (max-height: 600px) {
+    body {
+        align-items: flex-start; /* מבטל את המירכוז לאמצע הגובה */
+        padding-top: 20px;      /* נותן קצת אוויר מלמעלה */
+        padding-bottom: 20px;
+    }
+    
+    .login-wrapper {
+        height: auto; /* מאפשר גלילה */
+    }
+}

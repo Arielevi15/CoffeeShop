@@ -216,71 +216,90 @@ h2 {
   border-color: #8f6543;
 }
 
-/* --- רספונסיביות מעודכנת --- */
+/* --- שיפורים לטאבלטים ומסכי ביניים (481px עד 768px) --- */
+@media (min-width: 481px) and (max-width: 768px) {
+  .wallet-wrapper {
+    max-width: 600px; /* הרחבת הכרטיס כדי שיהיה יותר מרווח */
+    padding: 35px;
+  }
+  
+  /* בטאבלט אנחנו כבר יכולים להציג 2 אפשרויות טעינה בשורה */
+  .options-grid {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+  }
 
-@media screen and (max-width: 480px) {
-    body {
-        padding-bottom: 90px; /* צמצום המרווח בטלפונים קטנים */
-    }
-
-    .wallet-wrapper {
-        max-width: 90%; /* תפיסת רוב רוחב המסך */
-        padding: 20px;
-        border-radius: 20px;
-    }
-
-    .header h1 {
-        font-size: 1.25rem;
-    }
-
-    .current-balance .value {
-        font-size: 1.1rem;
-    }
-
-    .price {
-        font-size: 1.2rem;
-    }
-
-    .pay-btn {
-        padding: 15px;
-        font-size: 1rem;
-    }
-
-    /* התאמת הפוטר למסכים קטנים - צמצום הריווחים */
-    .nav-item {
-        min-width: 60px;
-        padding: 6px 10px;
-    }
-    
-    .nav-item i {
-        font-size: 18px;
-    }
-    
-    .nav-item span {
-        font-size: 10px;
-    }
+  .header h1 {
+    font-size: 1.8rem; /* כותרת גדולה יותר */
+  }
 }
 
-/* התאמה למכשירים במצב אופקי (Landscape) */
-@media screen and (max-height: 600px) {
-    body {
-        align-items: flex-start;
-        padding-top: 20px;
-    }
-    
-    .wallet-wrapper {
-        margin-bottom: 100px;
-    }
+/* --- שיפורים למחשבים ומסכים רחבים (מעל 769px) --- */
+@media (min-width: 769px) {
+  body {
+    /* רקע מעט שונה למחשב כדי להדגיש את הכרטיס המרכזי */
+    background: radial-gradient(circle at center, #e4cdbb 0%, #d9c2aa 100%);
+  }
+
+  .wallet-wrapper {
+    max-width: 600px; /* כרטיס רחב ומרשים */
+    padding: 50px;
+    /* אפקט תלת מימד עדין */
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* אנימציית ריחוף עדינה לכל הלוח */
+  .wallet-wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+  }
+
+  .options-grid {
+    /* במחשב זה ייראה מעולה ב-2 עמודות מסודרות */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 25px;
+  }
+
+  /* הגדלת הכרטיסים הפנימיים */
+  .card-inner {
+    padding: 25px;
+  }
+  
+  .price {
+    font-size: 1.6rem;
+  }
+
+  /* --- התאמת הפוטר למחשב (כמו בשאר הדפים) --- */
+  .footer {
+    justify-content: center; /* מירכוז */
+    gap: 50px; /* רווחים גדולים */
+    padding: 15px 0;
+  }
+  
+  .nav-item {
+    flex-direction: row; /* אייקון ליד טקסט */
+    gap: 12px;
+    padding: 12px 24px;
+    width: auto;
+  }
+  
+  .nav-item span {
+    font-size: 14px;
+  }
 }
 
-
-/* טיפול במסכים רחבים (טאבלטים ומעלה) */
-@media screen and (min-width: 769px) {
-    
-    .wallet-wrapper {
-        max-width: 500px; /* הגדלה קלה של הקונטיינר במסכים גדולים */
-    }
+/* --- תיקון למסכים נמוכים מאוד (כמו iPhone SE לרוחב) --- */
+@media (max-height: 500px) {
+  .header {
+    margin-bottom: 20px; /* צמצום רווחים לגובה */
+  }
+  
+  .wallet-wrapper {
+    padding: 15px; 
+  }
+  
+  .footer {
+    display: none; /* הסתרת הפוטר כדי לא להסתיר את כפתור התשלום */
+  }
 }
-
-
-

@@ -1,7 +1,9 @@
 const ordersContainer = document.getElementById("orders"); 
+//כניסה להיסטוריית ההזמנות מהאיחסון המקומי של המשתמש
 const user = JSON.parse(localStorage.getItem("user"));
 
 const items = user.orders;
+//ריצה על כל הזמנות המשתמש
 items.forEach(p => {
     const orderDiv = document.createElement("div");
     orderDiv.className = "order-item";
@@ -19,6 +21,7 @@ items.forEach(p => {
     imgEl.alt = p.productName || p.ProductName;
     imgEl.className = "order-image";
 
+    // מכניס את כל הפרטים (שם, מחיר, תמונה) לתוך הקוביה של ההזמנה ומוסיף לדף
     orderDiv.append(name, price, imgEl);
     ordersContainer.appendChild(orderDiv);
 
