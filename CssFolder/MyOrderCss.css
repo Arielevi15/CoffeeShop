@@ -14,34 +14,35 @@ body {
 }
 
 .footer {
-  position: fixed;
+  position: fixed;  /* מקבע את הפוטר לתחתית המסך גם כשגוללים */
   bottom: 0;
   left: 0;
   width: 100%;
   background: linear-gradient(180deg, #d3b69a 0%, #dab794 100%);
   border-top: 1px solid #ecc19c;
-  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.12);  /* צל עליון  */
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around;  /* מפזר את הכפתורים באופן שווה */
   align-items: center;
   padding: 12px 0;
-  z-index: 1000;
+  z-index: 1000;  /* מבטיח שהפוטר יהיה תמיד מעל הכל */
 }
 
+/*  עיצוב כפתורי הניווט בפוטר  */
 .nav-item {
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  /* האייקון מעל הטקסט */
   align-items: center;
   gap: 4px;
   color: #5b3b27;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2);  /* רקע חצי שקוף */
   border: 1px solid rgba(178, 139, 104, 0.8);
   border-radius: 12px;
   padding: 8px 14px;
   min-width: 72px;
   cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;  /* מעבר חלק לכל השינויים) */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);  
 }
 
 .nav-item i {
@@ -52,6 +53,7 @@ body {
   font-weight: 600;
 }
 
+/* הסרת הקו התחתון הדיפולטיבי של קישורים */
 .nav-item a {
   text-decoration: none; 
     color: inherit;        
@@ -66,71 +68,90 @@ body {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
 }
 
+/* עיצוב הכפתור הפעיל */
 .nav-item.active {
   background: rgba(255, 255, 255, 0.4);
   color: #2f1c12;
   border-color: #8f6543;
 }
 
+
+/* --- הגדרת הרשת הראשית של ההזמנות (הקונטיינר) --- */
 #orders {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 12px;
+  gap: 12px; /* רווח בין הכרטיסים */
   margin: 20px;
-
 }
 
+/*  עיצוב כרטיס הזמנה בודד  */
 .order-item {
   display: grid;
+  /* חלוקה ל-2 עמודות:
+     1fr (שמאל): הטקסט יתפוס את כל המקום הפנוי.
+     auto (ימין): העמודה תהיה בדיוק ברוחב של התמונה.
+  */
   grid-template-columns: 1fr auto;
-  align-items: center;
+  align-items: center; /* מירכוז אנכי של הטקסט מול התמונה */
   gap: 12px;
+  
+  /* עיצוב המסגרת והרקע */
   border: 1px solid #c7a486;
   background: rgba(255,255,255,0.9);
   padding: 12px;
   border-radius: 12px;
 }
 
-.order-name  { grid-column: 1; grid-row: 1; }
-.order-price { grid-column: 1; grid-row: 2; }
+/* מיקום הטקסטים בצד שמאל (עמודה 1)  */
+.order-name  { 
+    grid-column: 1; 
+    grid-row: 1; /* שורה עליונה */
+}
 
+.order-price { 
+    grid-column: 1; 
+    grid-row: 2; /* שורה תחתונה */
+}
 
+/* --- מיקום התמונה בצד ימין (עמודה 2) --- */
 .order-image {
-  grid-column: 2;
+  grid-column: 2; /* נמצאת בעמודה הימנית */
+  
+  /* מתיחת התמונה על 2 עמודות*/
   grid-row: 1 / span 2;
+  
   justify-self: center;
   align-self: center;
   width: 80px;
   height: 80px;
-  object-fit: cover;
+  object-fit: cover; /* דואג שהתמונה לא תתעוות אלא תיחתך יפה */
   border-radius: 6px;
 }
 
 
-/* --- התאמות לטלפונים קטנים (עד 480px) --- */
+/*  התאמות לטלפונים  */
 @media (max-width: 480px) {
-  /* 1. סידור רשימת ההזמנות בטור אחד */
+ 
   #orders {
-    /* משנים ל-1fr כדי שהכרטיס יתפוס את כל רוחב המסך בטלפון */
     grid-template-columns: 1fr; 
     margin: 10px; /* פחות שוליים חיצוניים */
     gap: 10px;    /* רווח קטן יותר בין הזמנות */
   }
 
-  /* 2. הקטנת כרטיס ההזמנה */
+ 
   .order-item {
     padding: 10px; /* פחות ריפוד */
     gap: 10px;     /* קירוב התמונה לטקסט */
     border-radius: 8px; /* פינות קצת פחות עגולות שיתאים למסך קטן */
   }
 
-  /* 3. הקטנת התמונה כדי להשאיר מקום לטקסט */
+ 
   .order-image {
     width: 60px;  /* הקטנה מ-80px ל-60px */
     height: 60px;
   }
 
-  /* 4. הקטנת הטקסט */
+  
   .order-name {
     font-size: 14px;
   }
@@ -139,7 +160,7 @@ body {
     font-size: 14px;
   }
 
-  /* 5. התאמת הפוטר (כמו בדפים האחרים) */
+
   .footer {
     padding: 8px 0;
   }
@@ -153,19 +174,17 @@ body {
   }
 }
 
-/* --- התאמות לטאבלטים (בין 481px ל-1024px) --- */
+/*  התאמות לטאבלטים   */
 @media (min-width: 481px) and (max-width: 1024px) {
   #orders {
-    /* בטאבלט אפשר להציג 2 הזמנות בשורה */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 16px;
   }
 }
 
-/* --- התאמות למחשבים (מעל 1025px) --- */
+/*  התאמות למחשבים   */
 @media (min-width: 1025px) {
   #orders {
-    /* הגבלת רוחב כדי שההזמנות לא יימרחו על כל מסך ה-4K */
     max-width: 1000px;
     margin: 30px auto; /* מירכוז הרשימה באמצע המסך */
     gap: 20px;
@@ -176,14 +195,12 @@ body {
     cursor: default; /* או pointer אם לחיצה עושה משהו */
   }
 
-  /* אפקט נחמד כשעוברים עם העכבר על הזמנה */
   .order-item:hover {
     transform: translateX(5px); /* תזוזה קטנה הצידה */
     box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* הבלטה */
     background: #fff; /* הבהרה של הרקע */
   }
   
-  /* שיפור הפוטר למחשב */
   .footer {
     justify-content: center;
     gap: 40px;

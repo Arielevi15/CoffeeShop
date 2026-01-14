@@ -17,6 +17,7 @@ body {
   padding-bottom: 110px;
 }
 
+/* עיצוב משותף לכל הכרטיסים בדף */
 .welcome,
 .container .logo,
 .orders,
@@ -33,8 +34,8 @@ body {
   background-color: #f4ebe3;
 }
 
+/* ההידר */
 #header {
-  /* ... שאר ההגדרות של ההדר נשארות אותו דבר ... */
   position: relative;
   background-color: white;
   border-bottom: 1px solid #ddd;
@@ -47,7 +48,7 @@ body {
   margin-bottom: 24px; /* space below header */
 }
 
-/* שינינו את השם מ-hamburger-btn ל-menu-toggle-btn */
+
 .menu-toggle-btn {
   position: absolute;
   left: 20px;
@@ -71,20 +72,21 @@ body {
   height: 100%;
 }
 
+/*  הסידור הראשי של העמוד (Grid)  */
 .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 28px; /* more space between cards (try 28–32) */
+  gap: 28px; /*מרווח בין כרטיסים */
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 6px; /* tiny extra space under header */
+  padding-top: 6px; /* מרווח מעל ההדר */
 }
 
 .logo {
   width: 100%;
-  max-width: 520px; /* shrink the logo card; tweak to taste (e.g., 440–520) */
+  max-width: 520px; 
   padding: 0;
-  margin: 0 auto; /* center in its grid cell */
+  margin: 0 auto; 
   height: auto;
   background: transparent;
   border: none;
@@ -98,9 +100,9 @@ body {
 #myLogoVideo {
   display: block;
   width: 100%;
-  height: auto; /* keep aspect ratio */
-  object-fit: contain; /* show the whole logo */
-  border-radius: 12px; /* optional */
+  height: auto; 
+  object-fit: contain; /* מראה את כל הווידאו */
+  border-radius: 12px; 
 }
 
 .orders_clubMembership {
@@ -110,7 +112,7 @@ body {
   transition: 0.3s;
 }
 
-/* --- עיצוב כפתור המתנה היומית (ה-Input הקיים שלך) --- */
+/* עיצוב כפתור המתנה היומית */
 #DailyGift {
     background: linear-gradient(135deg, #6F4E37 0%, #8B5A2B 100%); /* גרדיאנט חום יוקרתי */
     color: white;
@@ -131,7 +133,7 @@ body {
     box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
-/* --- עיצוב הודעת הזכייה --- */
+/*  עיצוב הודעת הזכייה */
 #gift-message {
     margin-top: 15px;
     font-size: 1rem;
@@ -200,18 +202,18 @@ body {
 }
 
 .footer {
-  position: fixed;
+  position: fixed;  /* מקבע את הפוטר לתחתית המסך גם כשגוללים */
   bottom: 0;
   left: 0;
   width: 100%;
   background: linear-gradient(180deg, #d3b69a 0%, #dab794 100%);
   border-top: 1px solid #ecc19c;
-  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.12); /* צל עליון  */
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around;  /* מפזר את הכפתורים באופן שווה */
   align-items: center;
   padding: 12px 0;
-  z-index: 1000;
+  z-index: 1000;  /* מבטיח שהפוטר יהיה תמיד מעל הכל */
 }
 
 @media (max-width: 768px) {
@@ -283,36 +285,6 @@ body {
   border-color: #8f6543;
 }
 
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 280px;
-  height: 100%;
-  background-color: #f4ebe3; /* צבע רקע קרמי שמתאים לאתר */
-  border-right: 2px solid #c7a486;
-  z-index: 2000; /* חייב להיות גבוה יותר מהפוטר */
-
-  /* הטריק שמחביא את התפריט */
-  transform: translateX(-100%);
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* אנימציית קפיץ */
-  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
-}
-
-/* כשהתפריט פתוח */
-.sidebar.active {
-  transform: translateX(0); /* מחזיר אותו למסך */
-}
-
-/* כפתור הסגירה בתוך התפריט */
-.close-btn {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 24px;
-  cursor: pointer;
-  color: #5b3b27;
-}
 
 .menu-content {
   padding: 60px 20px;
@@ -349,7 +321,7 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: 0.3s;
-  backdrop-filter: blur(2px); /* טשטוש נחמד */
+  backdrop-filter: blur(2px); /* טשטוש  */
 }
 
 .overlay.active {
@@ -393,9 +365,7 @@ body {
   }
 
   /* התאמת תפריט הצד לרוחב המסך */
-  .sidebar {
-    width: 85%; /* במקום רוחב קבוע של 280px */
-  }
+  
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {

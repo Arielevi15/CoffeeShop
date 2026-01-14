@@ -9,6 +9,7 @@
 body {
     font-family: 'Outfit', sans-serif;
     background-color: #d9c2aa;
+    /* מרכוז הטופס בדיוק לאמצע המסך */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,21 +19,20 @@ body {
 }
 
 
-
+/*  הכרטיס הראשי  */
 .wallet-wrapper {
     background: white;
     width: 100%;
-    max-width: fit-content;
+    max-width: fit-content;  /* fit-content גורם לכרטיס להיות ברוחב התוכן שלו ולא להימתח סתם */
     border-radius: 24px;
-    overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    overflow: hidden;  /* מונע מתוכן לגלוש החוצה */
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);  /* צל גדול ורך */
     padding: 30px;
 }
 
-/* Header Styling */
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;  /* מרחיק את הכותרת והיתרה לצדדים מנוגדים */
     align-items: center;
     margin-bottom: 40px;
 }
@@ -49,6 +49,7 @@ body {
     font-size: 0.9rem;
 }
 
+/* תיבת היתרה הנוכחית */
 .current-balance {
     text-align: right;
     background: var(--light);
@@ -59,9 +60,9 @@ body {
 }
 
 .current-balance .label {
-    display: block;
+    display: block; /* יורד שורה */
     font-size: 0.75rem;
-    text-transform: uppercase;
+    text-transform: uppercase;  /* הופך אותיות גדולות באנגלית */
     letter-spacing: 1px;
 }
 
@@ -70,7 +71,7 @@ body {
     font-weight: 700;
 }
 
-/* Options Grid */
+/*  הגריד של כפתורי הטעינה  */
 h2 {
     font-size: 1.1rem;
     margin-bottom: 20px;
@@ -85,12 +86,12 @@ h2 {
 
 /* --- The Magic Card Styling --- */
 
-/* Hide the actual radio circle */
+/* שלב 1: מחביאים את העיגול המכוער והרגיל של ה-Radio Button */
 .option-card input[type="radio"] {
     display: none;
 }
 
-/* The card appearance */
+/* שלב 2: מעצבים את ה-Label (הכרטיס) שיראה כמו כפתור */
 .card-inner {
     border: 2px solid var(--gray);
     border-radius: 16px;
@@ -114,13 +115,12 @@ h2 {
     font-weight: 500;
 }
 
-/* --- State: Hover --- */
+/* אפקט במעבר עכבר */
 .card-inner:hover {
     border-color: #d1d5db;
     background-color: #f9fafb;
 }
 
-/* --- State: CHECKED (Selected) --- */
 /* זה מחליף את העיצוב כשבוחרים, בלי JS */
 .option-card input:checked + .card-inner {
     border-color: var(--primary);
@@ -136,7 +136,7 @@ h2 {
     color: var(--dark);
 }
 
-/* Pay Button */
+
 .pay-btn {
     width: 100%;
     padding: 18px;
@@ -155,54 +155,54 @@ h2 {
 }
 
 
-/* --- Footer Sticky Styling --- */
 .footer {
-  position: fixed;
+  position: fixed;  /* מקבע את הפוטר לתחתית המסך גם כשגוללים */
   bottom: 0;
   left: 0;
   width: 100%;
   background: linear-gradient(180deg, #d3b69a 0%, #dab794 100%);
   border-top: 1px solid #ecc19c;
-  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.12);  /* צל עליון  */
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around;  /* מפזר את הכפתורים באופן שווה */
   align-items: center;
   padding: 12px 0;
-  z-index: 1000;
+  z-index: 1000;  /* מבטיח שהפוטר יהיה תמיד מעל הכל */
 }
 
+/*  עיצוב כפתורי הניווט בפוטר  */
 .nav-item {
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  /* האייקון מעל הטקסט */
   align-items: center;
   gap: 4px;
   color: #5b3b27;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2);  /* רקע חצי שקוף */
   border: 1px solid rgba(178, 139, 104, 0.8);
   border-radius: 12px;
   padding: 8px 14px;
   min-width: 72px;
   cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;  /* מעבר חלק לכל השינויים) */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);  
 }
 
 .nav-item i {
   font-size: 20px;
 }
-
 .nav-item span {
   font-size: 12px;
   font-weight: 600;
 }
 
-/* ביטול קו תחתון וצבע לקישורים בתוך הפוטר */
+/* הסרת הקו התחתון הדיפולטיבי של קישורים */
 .nav-item a {
   text-decoration: none; 
     color: inherit;        
     display: flex;       
     align-items: center;
 }
+
 .nav-item:hover {
   background: rgba(255, 255, 255, 0.28);
   color: #3e2618;
@@ -210,11 +210,13 @@ h2 {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
 }
 
+/* עיצוב הכפתור הפעיל */
 .nav-item.active {
   background: rgba(255, 255, 255, 0.4);
   color: #2f1c12;
   border-color: #8f6543;
 }
+
 
 /* --- שיפורים לטאבלטים ומסכי ביניים (481px עד 768px) --- */
 @media (min-width: 481px) and (max-width: 768px) {
@@ -289,17 +291,31 @@ h2 {
   }
 }
 
+
+
 /* --- תיקון למסכים נמוכים מאוד (כמו iPhone SE לרוחב) --- */
-@media (max-height: 500px) {
-  .header {
-    margin-bottom: 20px; /* צמצום רווחים לגובה */
-  }
-  
-  .wallet-wrapper {
-    padding: 15px; 
-  }
-  
+@media (max-width: 600px) {
   .footer {
-    display: none; /* הסתרת הפוטר כדי לא להסתיר את כפתור התשלום */
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 8px 6px;
+  }
+
+  .nav-item {
+    flex: 1 1 70px;
+    min-width: 0;
+    padding: 6px 8px;
+  }
+
+  .nav-item i {
+    font-size: 16px;
+  }
+
+  .nav-item span {
+    font-size: 10px;
+  }
+
+  body {
+    padding-bottom: 90px; /* keep content above fixed footer */
   }
 }
